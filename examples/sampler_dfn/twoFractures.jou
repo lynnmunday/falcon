@@ -1,0 +1,85 @@
+reset
+create vertex 188.064 111.611 87.9432
+create vertex 161.192 82.9205 10.1281
+create vertex 79.8145 53.2154 0.34597
+create vertex 25.3082 52.2012 68.3789
+create vertex 52.1798 80.892 146.194
+create vertex 133.558 110.597 155.976
+compress
+compress
+create curve vertex 1 2
+create curve vertex 2 3
+create curve vertex 3 4
+create curve vertex 4 5
+create curve vertex 5 6
+create curve vertex 6 1
+create surface curve 1 2 3 4 5 6
+
+create vertex 152.913 61.2445 79.0364
+create vertex 142.712 57.6276 113.847
+create vertex 122.28 83.3694 129.623
+create vertex 112.05 112.728 110.587
+create vertex 122.251 116.345 75.7765
+create vertex 142.682 90.6032 60.001
+compress
+create curve vertex 7 8
+create curve vertex 8 9
+create curve vertex 9 10
+create curve vertex 10 11
+create curve vertex 11 12
+create curve vertex 12 7
+create surface curve 7 8 9 10 11 12
+
+imprint all
+merge all
+surface all size 10
+surface all scheme trimesh
+mesh surface all
+surface all smooth scheme laplacian free
+smooth surface all
+export mesh "twoFractures_Intersect.exo" overwrite
+
+
+################################
+
+
+reset
+create vertex 188.064 111.611 87.9432
+create vertex 161.192 82.9205 10.1281
+create vertex 79.8145 53.2154 0.34597
+create vertex 25.3082 52.2012 68.3789
+create vertex 52.1798 80.892 146.194
+create vertex 133.558 110.597 155.976
+compress
+compress
+create curve vertex 1 2
+create curve vertex 2 3
+create curve vertex 3 4
+create curve vertex 4 5
+create curve vertex 5 6
+create curve vertex 6 1
+create surface curve 1 2 3 4 5 6
+
+create vertex 152.913 61.2445 79.0364
+create vertex 142.712 57.6276 113.847
+create vertex 122.28 83.3694 129.623
+create vertex 117.71398632 96.47318977 121.12655459
+create vertex 143.02222627 89.62689261 60.63401173
+
+compress
+create curve vertex 7 8
+create curve vertex 8 9
+create curve vertex 9 10
+create curve vertex 10 11
+create curve vertex 11 7
+
+create surface curve 7 8 9 10 11
+
+imprint all
+merge all
+surface all size 10
+surface all scheme trimesh
+mesh surface all
+surface all smooth scheme laplacian free
+smooth surface all
+export mesh "twoFractures_noIntersect.exo" overwrite

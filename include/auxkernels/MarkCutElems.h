@@ -38,6 +38,9 @@ private:
   /// The mesh we want to cut with
   const std::unique_ptr<const ReplicatedMesh> _cutter_mesh;
 
+  /// tolerance for ray tracing intersection
+  const Real _intersection_tolerance;
+
   /// The elem:bbox pairs from the cut mesh that intersect our processor
   std::vector<std::pair<const Elem *, BoundingBox>> _cutter_bboxes;
 };
